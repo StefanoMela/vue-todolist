@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- VUE -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- JS -->
+    <script src="./js/script.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper" id="app">
+        <div class="container d-flex flex-column align-items-center">
+            <h1 class="my-5">To BooList</h1>
+            <ul class="list-group w-50">
+                <li v-for="(thing, index) in toDoThings" class="list-group-item">
+                    {{ thing.text }} {{ thing.data }}
+                </li>
+            </ul>
+            <div class="input-group w-50 mt-3">
+                <input type="text" class="form-control" placeholder="Recipient's username"
+                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button">Button</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
