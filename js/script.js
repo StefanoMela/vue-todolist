@@ -69,5 +69,17 @@ createApp({
             this.toDoThings.splice(index, 1);
         },
 
+        isDone() {
+
+            if(this.done == true) {
+
+                this.toDoThings.done == false;
+                this.toWrite.classList.remove("text-decoration-line-through");
+            } else {
+
+                this.toDoThings.done == true;
+                this.toWrite.classList.add("text-decoration-line-through");
+            };
+        },
     }
 }).mount('#app')
