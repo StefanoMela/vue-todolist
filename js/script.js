@@ -32,7 +32,7 @@ createApp({
                 },
                 {
                     text: "Fare gli esercizi",
-                    done: true,
+                    done: false,
                 },
                 {
                     text: "Allenarsi",
@@ -40,9 +40,28 @@ createApp({
                 },
                 {
                     text: "Portare a spasso i cani",
-                    done: true,
+                    done: false,
                 },
-            ]
+            ],
+            
+            newThing: {
+
+                text: "",
+                done: "",
+            },
         }
+    },
+    methods: {
+
+        addItem() {
+
+            this.toDoThings.push(newThing);
+        },
+
+        removeItem() {
+
+            console.log(index);
+        },
+
     }
 }).mount('#app')

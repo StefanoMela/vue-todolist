@@ -67,3 +67,9 @@ a {
 
 
 /* ! Style */
+
+
+.bi-x-square:hover {
+
+    color: red;
+}
