@@ -24,16 +24,16 @@
             <h1 class="my-5">To BooList</h1>
             <ul class="list-group w-50">
                 <li v-for="(thing, index) in toDoThings"
-                    :class="(thing.done == true) ? 'text-decoration-line-through' : '' " class="list-group-item">
-                    {{ thing.text }} {{ thing.data }} {{ index }}
-                    <i class="bi bi-x-square float-end" @onclick="removeItem()"></i>
+                :class="(thing.done == true) ? 'text-decoration-line-through' : '' " class="list-group-item">
+                    {{ index }} - {{ thing.text }} {{ thing.data }}
+                    <i class="bi bi-x-square float-end text-danger" @click="removeItem(index)"></i>
                 </li>
             </ul>
             <div class="input-group w-50 mt-3">
-                <input v-model.trim="newThing" type="text" class="form-control" placeholder="Cosa devi fare ?"
+                <input v-model.trim="newThing.text" type="text" class="form-control" placeholder="Cosa devi fare ?"
                     aria-label="Cosa devi fare ?" aria-describedby="basic-addon2">
                 <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="button" @onclick="addItem()">Aggiungi alla lista</button>
+                    <button class="btn btn-outline-secondary" type="button" @click="addItem()" @keyup.enter="addItem()">Aggiungi alla lista</button>
                 </div>
             </div>
         </div>

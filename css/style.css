@@ -69,7 +69,8 @@ a {
 /* ! Style */
 
 
-.bi-x-square:hover {
 
-    color: red;
+ul>li {
+
+    cursor: pointer;
 }

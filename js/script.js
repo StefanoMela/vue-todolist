@@ -43,24 +43,30 @@ createApp({
                     done: false,
                 },
             ],
-            
+
             newThing: {
 
                 text: "",
-                done: "",
+                done: false,
             },
+
         }
     },
     methods: {
 
+        // MS 3
         addItem() {
 
-            this.toDoThings.push(newThing);
+        let toWrite = {...this.newThing}
+            this.toDoThings.push(toWrite);
+            this.newThing.text = "";
         },
 
-        removeItem() {
 
-            console.log(index);
+        // MS 2
+        removeItem(index) {
+
+            this.toDoThings.splice(index, 1);
         },
 
     }
