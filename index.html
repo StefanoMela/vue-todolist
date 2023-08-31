@@ -21,8 +21,11 @@
         <div class="container d-flex flex-column align-items-center">
             <h1 class="my-5">To BooList</h1>
             <ul class="list-group w-50">
-                <li v-for="(thing, index) in toDoThings" class="list-group-item">
-                    {{ thing.text }} {{ thing.data }}
+                <li 
+                    v-for="(thing, index) in toDoThings" 
+                    :class="(thing.done == true) ? 'text-decoration-line-through' : '' " 
+                    class="list-group-item">
+                        {{ thing.text }} {{ thing.data }}
                 </li>
             </ul>
             <div class="input-group w-50 mt-3">
