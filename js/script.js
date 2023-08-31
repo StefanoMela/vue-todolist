@@ -57,7 +57,7 @@ createApp({
         // MS 3
         addItem() {
 
-        let toWrite = {...this.newThing}
+            let toWrite = { ...this.newThing }
             this.toDoThings.push(toWrite);
             this.newThing.text = "";
         },
@@ -69,17 +69,9 @@ createApp({
             this.toDoThings.splice(index, 1);
         },
 
-        isDone() {
-
-            if(this.done == true) {
-
-                this.toDoThings.done == false;
-                this.toWrite.classList.remove("text-decoration-line-through");
-            } else {
-
-                this.toDoThings.done == true;
-                this.toWrite.classList.add("text-decoration-line-through");
-            };
+        isDone(index) {
+            this.toDoThings[index].done = !this.toDoThings[index].done;
         },
     }
+    
 }).mount('#app')

@@ -25,7 +25,7 @@
             <ul class="list-group w-50">
                 <li v-for="(thing, index) in toDoThings"
                 :class="(thing.done == true) ? 'text-decoration-line-through' : '' " class="list-group-item"
-                @click="isDone()">
+                @click="isDone(index)">
                     {{ index }} - {{ thing.text }} {{ thing.data }}
                     <i class="bi bi-x-square float-end text-danger" @click="removeItem(index)"></i>
                 </li>
